@@ -4,7 +4,7 @@ metadata:
   name: myingress-443
   namespace: 3-tier-ns
   annotations:
-    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/scheme: internal
     # Target Type and Listener Port
 
 
