@@ -5,6 +5,7 @@ metadata:
   namespace: 3-tier-ns
   annotations:
     alb.ingress.kubernetes.io/scheme: internal
+    alb.ingress.kubernetes.io/subnets: subnet-0e81481fb2ef70568,subnet-0ef8fa37cd2e799b4
     # Target Type and Listener Port
 
 
