@@ -4,15 +4,14 @@ metadata:
   name: myingress-443
   namespace: 3-tier-ns
   annotations:
-    alb.ingress.kubernetes.io/scheme: internal
-    alb.ingress.kubernetes.io/subnets: subnet-0e81481fb2ef70568,subnet-0ef8fa37cd2e799b4
+    alb.ingress.kubernetes.io/scheme: internet-facing
     # Target Type and Listener Port
 
 
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}, {"HTTP":80}]'
 
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:609898225296:certificate/8774911e-e7f5-45af-b3a8-17e50b46a5e8 # Replace with your ACM certificate ARN
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:609898225296:certificate/8774911e-e7f5-45af-b3a8-17e50b46a5e8
     alb.ingress.kubernetes.io/ssl-redirect: '443'
 spec:
   ingressClassName: alb
